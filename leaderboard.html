@@ -13,7 +13,12 @@
     <input type="button" class="sortByName" value="Sort by Name"/>
     <input type="button" class="sortByPoints" value="Sort by Points"/>
     <input type="button" class="shufflePoints" value="Harlem Shuffle"/>
-  <div>
+    <input type="button" class="addPlayer" value="Add player"/>
+   <div id="adder">
+    {{#if edit_mode}}
+      {{>yyz}}
+    {{/if}}
+  </div>
   <div class="leaderboard">
     {{#each players}}
       {{> player}}
@@ -36,6 +41,13 @@
   <div class="player {{selected}}">
     <span class="name">{{name}}</span>
     <span class="score">{{score}}</span>
+    <span class="delete">
+      <input type="button" class="delete_player" value="delete"/>
+    </span>
   </div>
+</template>
+
+<template name="yyz">
+  <p>check one two</p>
 </template>
 
