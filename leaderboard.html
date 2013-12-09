@@ -16,7 +16,7 @@
     <input type="button" class="addPlayer" value="Add player"/>
    <div id="adder">
     {{#if edit_mode}}
-      {{>yyz}}
+      {{>new_player_form}}
     {{/if}}
   </div>
   <div class="leaderboard">
@@ -47,7 +47,11 @@
   </div>
 </template>
 
-<template name="yyz">
-  <p>check one two</p>
+<template name="new_player_form">
+  <form id="scientistform">
+    Player <input type="text" id="newname" />
+    Points <input type="text" id="newpoints" /> 
+    <input type="button" class="insert_player" value="add" />
+  </form>
 </template>
 

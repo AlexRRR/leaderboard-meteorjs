@@ -65,6 +65,15 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.new_player_form.events({
+    'click input.insert_player': function() {
+      var player_name = document.getElementById('newname').value;
+      var initial_score = parseInt(document.getElementById('newpoints').value);
+      Players.insert({name: player_name, score: initial_score});
+      document.getElementById('scientistform').reset();
+    }
+  });
+
 }
 
 // On server startup, create some players if the database is empty.
